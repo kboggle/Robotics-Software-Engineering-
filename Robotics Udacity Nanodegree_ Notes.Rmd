@@ -1,0 +1,148 @@
+---
+title: "Robotics Notes"
+output: html_notebook
+---
+# Part 1 - INTRO to ROBOTICS
+
+
+## Lesson 2 - What is a robot
+
+- Three ingredients of  robot
+  1. Perception
+  2. Decision making
+  3. Action
+  
+  
+## Lesson 3 - Career support
+contact -  career-support@udacity.com.
+
+- What are common job titles in Robotics?
+
+Tip: Remember that there are so many roles available in robotics. Instead of searching for job titles, consider finding robotics companies and looking at their overall jobs page.
+
+A short list of common job titles are:
+
+- Data Scientist, Natural Language Processing
+- Computer Vision Engineer
+- NLP (neural-linguistic programming) Scientist
+- Watson Machine Learning Engineer
+- Software Engineer
+- Deep Learning Engineer
+- Software Engineer - Vision
+
+## Lesson 6 - Guidelines to use workspace
+
+Guidelines
+- Store all your files in the /home/workspace directory so you can still access them after rebooting Ubuntu. Any file stored outside of /home/workspace/ directory will be deleted after rebooting!!!
+
+- You'll get an automated message after the first two minutes and then every 30 minutes to check if you are still using the server. Be sure to confirm or else you'll lose access to your current session and all of the files stored outside of the /home/workspace directory.
+
+- Remember to disable your GPU once you are done with your session since you will only get 50 hours of GPU time. To disable the GPU, return to the classroom and next to the remaining GPU time, hit DISABLE.
+
+### Booting the Desktop
+
+- Enable GPU Mode (if needed and provided)
+- Click GO TO DESKTOP
+- Wait for at least two minutes for Lubuntu to load
+- Ignore the Error(No session for PID ##) when the desktop opens
+
+ --- Voila! A Lubuntu desktop should now load in another browser tab!
+
+Note: Booting the Desktop will only work on Google Chrome! Do not bookmark visual desktop links or share them with anyone because you will not be able to get back to them. Udacity Workspaces uses a different instance, and hence a different link, at each boot.
+
+## Lesson 4 - Prep
+
+  - 1. Virtual machine is set up 
+        password is robo-nd
+      
+  - 2. Link to ReadMe files here (https://www.udacity.com/course/writing-readmes--ud777)
+  
+  - 3. Link to C++ programming here [https://classroom.udacity.com/courses/ud210]
+  
+  - 4. Link to linux command line here [https://classroom.udacity.com/courses/ud595]
+  
+  
+# PART 2- GAZEBO Basics
+
+
+## Gazebo components
+
+There are six components involved in running an instance of a Gazebo simulation:
+
+- Gazebo Server
+- Gazebo Client
+- World Files
+- Model Files
+- Environment Variables
+- Plugins
+
+Server and client is run sequentially using the following command line
+
+```{html}
+ gazebo
+```
+
+Running a '.world' file launches the simulation
+
+```{html}
+gazebo <yourworld>.world
+```
+
+The world file is formatted using Simulation Description Format or SDF. Basic format should look like this
+
+```{html}
+
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <physics type="ode">
+      ...
+    </physics>
+
+    <scene>
+      ...
+    </scene>
+
+    <model name="box">
+      ...
+    </model>
+
+    <model name="sphere">
+      ...
+    </model>
+
+    <light name="spotlight">
+      ...
+    </light>
+
+  </world>
+</sdf>
+```
+
+  To create a model - we must create a separate SDF file with exctlx the same format as our WORLD file. his model file should represent only a single model (ex: a robot). It should be kept in a separate file so that it can be used it other projects
+  
+  To include a moddel inside our world file use the following code to the world's SDF file. 
+  
+```{html}
+<include>
+  <uri>model://model_file_name</uri>
+</include>
+```
+  
+  
+## Gazebo GUI
+
+Simulating a robot and writing a plugin
+
+```{html}
+https://github.com/udacity/RoboND-myrobot
+
+git clone https://github.com/udacity/RoboND-myrobot myrobot
+```
+
+TRY out these things here
+
+```{html}
+http://gazebosim.org/tutorials
+```
+
