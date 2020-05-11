@@ -1,7 +1,6 @@
 <sdf version='1.6'>
   <world name='default'>
-    <plugin name='hello' filename='libhello.so'/>
-    <light name='sun' type='directional'>
+    
       <cast_shadows>1</cast_shadows>
       <pose frame=''>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -214,28 +213,6 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='my_robot'>
-        <pose frame=''>-0.069225 -0.013341 0.100002 -1e-06 0.000671 0.392988</pose>
-        <scale>1 1 1</scale>
-        <link name='Side_wheel_left'>
-          <pose frame=''>-0.126667 0.125224 0.100002 -3e-06 0.01634 0.392988</pose>
-          <velocity>1e-06 -0.001996 0.006265 0.019995 1.2e-05 -5.2e-05</velocity>
-          <acceleration>1.75187 -3.29117 12.5251 1.58047 -0.42317 0.546172</acceleration>
-          <wrench>8.75935 -16.4558 62.6256 0 -0 0</wrench>
-        </link>
-        <link name='Side_wheel_right'>
-          <pose frame=''>-0.011782 -0.151906 0.100002 2e-06 -0.01845 0.392988</pose>
-          <velocity>-1.1e-05 -0.00201 0.000475 0.020104 -0.000129 -7.9e-05</velocity>
-          <acceleration>1.03881 -3.5988 0.950878 1.71934 -0.36304 0.474008</acceleration>
-          <wrench>5.19403 -17.994 4.75439 0 -0 0</wrench>
-        </link>
-        <link name='robot_footprint'>
-          <pose frame=''>-0.069225 -0.013341 0.100002 -1e-06 0.000671 0.392988</pose>
-          <velocity>-6.2e-05 -0.001916 0.00338 0.020346 0.00015 -2.2e-05</velocity>
-          <acceleration>1.31129 -3.29518 6.76169 2.65843 -0.561204 0.976359</acceleration>
-          <wrench>19.8004 -49.7572 102.102 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking'>

@@ -66,7 +66,7 @@ else if (move == left_count){
     drive_robot(0,-0.5);  
 }
 else if (move == right_count){
-    drive_robot(0.5,0.5);  
+    drive_robot(0,0.5);  
 }
 else if (move == front_count){
     drive_robot(0.5,0);  
